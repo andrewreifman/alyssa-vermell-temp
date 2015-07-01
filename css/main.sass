@@ -1,0 +1,286 @@
+$yellow: #f7d94f
+$blue: #64bbe2
+
+*
+  box-sizing: border-box
+
+body
+  background-color: #f2f4f6
+  font-family: "proxima-nova", sans-serif
+
+h1
+  font-size: 40px
+
+p
+  line-height: 1.4
+
+a
+  text-decoration: none
+
+.btn
+  background-color: $yellow
+  color: #000
+  border-radius: 25px
+  font-size: 15px
+  line-height: 38px
+  height: 38px
+  padding: 0 25px
+  font-weight: bold
+  transition: background-color .15s linear
+
+  &:hover
+    background-color: #fff
+
+.clearfix
+  overflow: auto
+  zoom: 1
+
+body.home header
+  background-color: transparent
+
+header
+  position: fixed
+  top: 0
+  left: 0
+  width: 100%
+  padding: 20px
+  z-index: 10
+  background-color: $blue
+  transition: all .15s linear
+
+  &.scrolled
+    background-color: $blue !important
+    box-shadow: 0 2px rgba(0,0,0,.06)
+    padding: 10px 12px 8px
+    height: 70px
+
+    .logo img
+      height: 50px
+
+    .btn
+      margin-top: 5px
+
+      &.login
+        border-color: rgba(255,255,255,.5)
+
+  .logo
+    float: left
+    img
+      max-height: 100%
+      display: block
+      transition: height .15s linear
+
+  .btn
+    float: right
+    margin-right: 10px
+    margin-top: 10px
+    transition: all .15s linear
+
+    &.login
+      color: #fff
+      background-color: transparent
+      border: 2px solid rgba(255,255,255,.3)
+      line-height: 36px
+
+      &:hover
+        background-color: #fff
+        color: #000
+
+.hero
+  background-color: #2081bb
+  padding-top: 130px
+  text-align: center
+  position: relative
+  overflow: hidden
+
+  &:after
+    content: ""
+    position: absolute
+    bottom: -4px
+    left: 0
+    width: 100%
+    height: 4px
+    display: block
+    box-shadow: 0 -4px rgba(0,0,0,.1)
+
+  &:before
+    content: ""
+    width: 450px
+    height: 450px
+    border-radius: 50%
+    display: block
+    position: absolute
+    left: calc(50% - 225px)
+    bottom: -225px
+    z-index: 0
+    background-color: rgba(100,188,286,.5)
+    box-shadow: 0 0 0 120px rgba(100,188,286,.15), 0 0 0 240px rgba(100,188,286,.15), 0 0 0 360px rgba(100,188,286,.1), 0 0 0 480px rgba(100,188,286,.1), 0 0 0 600px rgba(100,188,286,.1), 0 0 0 720px rgba(100,188,286,.1)
+
+  .content
+    position: relative
+    z-index: 5
+
+  h1
+    color: #fff
+    font-size: 72px
+    line-height: 1
+    margin: 0
+
+  h2
+    color: #97ceeb
+    font-size: 24px
+    margin-bottom: 70px
+    margin-top: 10px
+    font-weight: 400
+
+  img
+    display: block
+    margin: 0 auto
+    max-width: 100%
+
+.features
+  padding: 80px 0 65px
+  max-width: 1100px
+  margin: 0 auto
+
+  .feature-item
+    float: left
+    width: 25%
+    padding: 0 20px
+    text-align: center
+
+    img
+      margin-bottom: 40px
+
+    p
+      font-size: 16px
+      color: #000
+
+.main-content
+  max-width: 1000px
+  padding: 110px 20px 40px
+  margin: 0 auto
+
+.sign-up-banner
+  width: 100%
+  text-align: center
+  background-color: $blue
+  padding: 60px 0 75px
+
+  h2
+    color: #fff
+    font-size: 30px
+    margin-bottom: 30px
+    margin-top: 0
+
+  .btn
+    width: 200px
+    height: 48px
+    line-height: 48px
+    font-size: 17px
+    text-align: center
+    display: inline-block
+    vertical-align: middle
+    margin: 0 8px
+
+    img
+      display: block
+      margin: 0 auto
+
+footer
+  width: 100%
+  background-color: #2b434e
+  padding: 18px 0 14px
+  text-align: center
+
+  ul
+    list-style: none
+    margin-bottom: 30px
+    padding: 0
+
+    li
+      display: inline-block
+      color: #fff
+      margin: 0 15px
+      font-size: 13px
+
+      a
+        color: #fff
+
+        .fa
+          font-size: 18px
+          margin-left: 14px
+          vertical-align: middle
+
+  p
+    font-size: 12px
+    color: #7e9ead
+
+    .fa
+      color: #de3e74
+      font-size: 14px
+
+@media screen and (max-width: 767px)
+  header
+    padding: 10px 8px 8px
+    height: 70px
+
+    .logo img
+      height: 50px
+
+    .btn
+      margin-top: 5px
+      margin-right: 6px
+      font-size: 14px
+      padding: 0 15px
+
+  .hero
+    padding-top: 110px
+    h1
+      font-size: 9vw
+      margin-bottom: 15px
+    h2
+      font-size: 18px
+      margin-bottom: 40px
+      padding: 0 20px
+
+  .features
+    padding: 60px 0 20px
+
+    .feature-item
+      width: 50%
+      margin-bottom: 40px
+
+      &:nth-child(3)
+        clear: left
+
+      img
+        margin-bottom: 10px
+
+  .sign-up-banner
+    padding: 40px 15px 55px
+
+    h2
+      font-size: 24px
+      margin-bottom: 25px
+
+  footer
+    ul li
+      margin-bottom: 16px
+
+
+@media screen and (max-width: 600px)
+  .features
+    .feature-item
+      width: 100%
+
+  .sign-up-banner
+    padding-bottom: 25px
+
+    h2
+      font-size: 20px
+      margin-bottom: 25px
+
+    .btn
+      margin: 0 0 15px
+      width: 100%
